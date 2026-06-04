@@ -1,0 +1,71 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+/Photos/LISAA archi/
+
+# local generation/research artifacts
+/.tmp/
+/.firecrawl/
+/fal_downloads/
+/export.txt
+/public/generated/
+/bin/styleforge-render
+/bin/styleforge-server
+/wasm-preview/target/
+*.safetensors
+/scripts/download_fal_images.py
+
+# brand assets — stored in Supabase bucket 'brand', download via scripts/setup_brand_assets.mjs
+/public/brand/
+/ADS asset brand/
+/ADS font/
+/Logos/
+ESG BRANDING.png
+Component 5.svg
+
+# scraped/collected data — not for public repo
+/data/advertisers.json
+/data/manual-meta/
+/public/data/*.json
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.local.example
+
+# MCP config (contains credentials)
+.mcp.json
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

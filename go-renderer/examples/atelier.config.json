@@ -1,0 +1,90 @@
+{
+  "input": "../../public/generated/clean/styleforge-1780498969724-1.png",
+  "outputDir": "../../public/generated/variants",
+  "prefix": "atelier-demo",
+  "variants": [
+    {
+      "id": "story",
+      "width": 1080,
+      "height": 1920,
+      "fit": "cover",
+      "format": "png",
+      "gradient": {
+        "top": "#000000",
+        "topOpacity": 0.18,
+        "bottom": "#000000",
+        "bottomOpacity": 0.55
+      },
+      "overlays": [
+        {
+          "path": "../../public/brand/atelier-de-sevres/assets/logo-original.png",
+          "x": 110,
+          "y": 210,
+          "width": 400,
+          "height": 180,
+          "opacity": 1
+        },
+        {
+          "path": "../../public/brand/atelier-de-sevres/assets/event-original.png",
+          "x": 78,
+          "y": 896,
+          "width": 520,
+          "height": 420,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "feed-4x5",
+      "width": 1080,
+      "height": 1350,
+      "fit": "cover",
+      "format": "jpg",
+      "quality": 92,
+      "gradient": {
+        "top": "#000000",
+        "topOpacity": 0.08,
+        "bottom": "#000000",
+        "bottomOpacity": 0.45
+      },
+      "overlays": [
+        {
+          "path": "../../public/brand/atelier-de-sevres/assets/logo-original.png",
+          "x": 86,
+          "y": 100,
+          "width": 330,
+          "height": 148,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "square",
+      "width": 1080,
+      "height": 1080,
+      "fit": "cover",
+      "format": "jpg",
+      "quality": 92,
+      "colorBlocks": [
+        {
+          "color": "#000000",
+          "opacity": 0.34,
+          "x": 0,
+          "y": 760,
+          "width": 1080,
+          "height": 320
+        }
+      ],
+      "overlays": [
+        {
+          "path": "../../public/brand/atelier-de-sevres/assets/logo-original.png",
+          "x": 78,
+          "y": 78,
+          "width": 300,
+          "height": 135,
+          "opacity": 1
+        }
+      ]
+    }
+  ]
+}

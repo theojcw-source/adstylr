@@ -1,0 +1,40 @@
+{
+  "1": {
+    "inputs": {
+      "prompt": "architectural editorial poster, precise composition, refined materials",
+      "image_size": "portrait_16_9",
+      "width": 576,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "guidance_scale": 3.5,
+      "num_images": 1,
+      "enable_safety_checker": true,
+      "seed": -1,
+      "lora_path_1": "",
+      "lora_scale_1": 1,
+      "lora_path_2": "",
+      "lora_scale_2": 1
+    },
+    "class_type": "Flux2Lora_fal",
+    "_meta": { "title": "Flux 2 LoRA (fal)" }
+  },
+  "2": {
+    "inputs": {
+      "filename_prefix": "styleforge",
+      "images": ["3", 0]
+    },
+    "class_type": "SaveImage",
+    "_meta": { "title": "Save Image" }
+  },
+  "3": {
+    "inputs": {
+      "image": ["1", 0],
+      "upscale_method": "lanczos",
+      "width": 1080,
+      "height": 1920,
+      "crop": "disabled"
+    },
+    "class_type": "ImageScale",
+    "_meta": { "title": "Local Upscale for Delivery" }
+  }
+}

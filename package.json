@@ -1,0 +1,58 @@
+{
+  "name": "styleforge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "lint": "eslint",
+    "export:ai": "python3 scripts/export_repo.py",
+    "render:atelier-overlay": "node scripts/render_atelier_overlay.mjs",
+    "render:go": "cd go-renderer && go run ./cmd/styleforge-render -config examples/atelier.config.json",
+    "render:go:build": "cd go-renderer && go build -o ../bin/styleforge-render ./cmd/styleforge-render",
+    "render:go:server": "cd go-renderer && go run ./cmd/styleforge-server",
+    "render:go:server:build": "cd go-renderer && go build -o ../bin/styleforge-server ./cmd/styleforge-server",
+    "backfill:clean": "node scripts/backfill_generation_clean_urls.mjs",
+    "wasm:build": "zig build-exe src/wasm/perceptual.zig -target wasm32-freestanding -O ReleaseSmall --export=getPixelBufPtr --export=dHash --export=hammingDistance -fno-entry -femit-bin=public/wasm/perceptual.wasm",
+    "preview:wasm:build": "cd wasm-preview && cargo build --target wasm32-unknown-unknown --release && wasm-bindgen --target web --out-dir ../public/wasm/styleforge-preview target/wasm32-unknown-unknown/release/styleforge_wasm_preview.wasm"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.2.5",
+    "@fal-ai/client": "^1.10.1",
+    "@fal-ai/server-proxy": "^1.2.1",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.107.0",
+    "@types/three": "^0.184.1",
+    "antd": "^6.4.3",
+    "fabric": "^7.4.0",
+    "jszip": "^3.10.1",
+    "konva": "^10.3.0",
+    "lucide-react": "^1.16.0",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-konva": "^19.2.4",
+    "sharp": "^0.34.5",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "concurrently": "^10.0.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
+  }
+}

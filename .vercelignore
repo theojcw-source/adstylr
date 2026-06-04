@@ -1,0 +1,8 @@
+public/generated/
+node_modules/
+.env*.local
+*.safetensors
+Photos/
+fal-comfy/
+sf_*.mjs
+.firecrawl/

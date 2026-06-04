@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: styleforge-renderer
+    runtime: docker
+    plan: free
+    rootDir: go-renderer
+    healthCheckPath: /healthz
