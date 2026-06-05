@@ -230,6 +230,10 @@ npm run backfill:clean
 
 Les scripts Python utilisent `scripts/requirements.txt`.
 
+## Licence
+
+Ce projet est distribue sous licence Apache-2.0. Voir `LICENSE`.
+
 ## Points a verifier en reprise
 
 - Verifier que les variables Supabase necessaires sont bien documentees et coherentes entre frontend, API routes et scripts.
