@@ -86,7 +86,7 @@ Le point d'entree principal cote app est `POST /api/comfy/generate`. Le nom de l
 
 ## Analyse concurrente avec Claude
 
-La page de veille ne se contente pas d'afficher des pubs concurrentes: elle utilise aussi Claude Vision pour transformer une creation concurrente en brief exploitable pour generer une nouvelle creation Atelier de Sevres.
+La page de veille ne se contente pas d'afficher des pubs concurrentes: elle utilise aussi Claude Vision pour transformer une creation concurrente en brief exploitable pour generer une nouvelle creation.
 
 Variables necessaires:
 
